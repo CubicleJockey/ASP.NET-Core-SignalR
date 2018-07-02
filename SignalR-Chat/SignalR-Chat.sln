@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR-Chat", "SignalR-Chat\SignalR-Chat.csproj", "{7A828527-7A84-4FF0-9666-F55A63AF1F6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F48A844F-84B0-4E06-AEC0-C3BF10A6D0EB}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A828527-7A84-4FF0-9666-F55A63AF1F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A828527-7A84-4FF0-9666-F55A63AF1F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A828527-7A84-4FF0-9666-F55A63AF1F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A828527-7A84-4FF0-9666-F55A63AF1F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {060DBC5D-4FAB-4C15-90ED-826B37884317}
+	EndGlobalSection
+EndGlobal
