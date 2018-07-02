@@ -7,6 +7,7 @@
 
  See Es5-chat.js for a Babel transpiled version of the following code:
 */
+const MESSAGESLISTID = 'messagesList';
 
 const connection = new signalR.HubConnectionBuilder()
     .withUrl('/chatHub')
@@ -18,13 +19,14 @@ connection.on('ReceiveMessage', (user, message) => {
                        .replace(/</g, '&lt;')
                        .replace(/>/g, '&gt;');
 
-    const encodedMsg = `${user} says ${mesage}`;
+    const encodedMsg = `${user}, says ${mesage}`;
 
     const li = document.createElement('li');
     li.textContent = encodedMsg;
 
-    document.getElementById('messagesList')
+    document.getElementById(MESSAGESLISTID)
             .appendChild(li);
+
 });
 
 connection.start()
@@ -40,4 +42,17 @@ document.getElementById('sendButton')
 
         event.preventDefault();
 
-});
+    });
+
+document.getElementById('clearButton')
+    .addEventListener('click', event => {
+
+        const messagesList = document.getElementById(MESSAGESLISTID);
+        if (messagesList.hasChildNodes()) {
+            messagesList.childNodes.forEach(function(item, index) {
+                item.remove();
+            });
+        }
+
+        event.preventDefault();
+    });

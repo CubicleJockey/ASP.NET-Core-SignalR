@@ -2,14 +2,25 @@
 @{
     ViewData["Title"] = "Chat Hub";
 }
+<div class="container-fluid">
+    <div class="row">
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        </div>
+    </div>
+
+</div>
 <div class="container">
     <div class="row">&nbsp;</div>
     <div class="row">
         <div class="col-6">&nbsp;</div>
         <div class="col-6">
-            User..........<input type="text" id="userInput" />
+            User: <input type="text" id="userInput" />
             <br />
-            Message...<input type="text" id="messageInput" />
+            Message: <input type="text" id="messageInput" />
             <input type="button" id="sendButton" value="Send Message" />
         </div>
     </div>
@@ -20,11 +31,11 @@
     </div>
     <div class="row">
         <div class="col-6">&nbsp;</div>
-        <div class="col-6">
+        <div id="messageArea" class="col-6">
             <ul id="messagesList"></ul>
         </div>
     </div>
+    <input type="button" id="clearButton" value="Clear" />
 </div>
 <script src="~/lib/@@aspnet/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/chat.js"></script>
-@*<script src="~/js/es5-chat.js"></script>*@
